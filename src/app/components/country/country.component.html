@@ -1,0 +1,41 @@
+<div class="jumbotron bg-white text-center">
+    <h1 class="display-4">Corona-covid-19 Tracker Country Wise</h1>
+
+    <h2>Country</h2>
+<select (change)="getcountry($event.target.value)">
+    <option
+    *ngFor="let country of countries" value={{country.Slug}}>{{country.Country}} </option>
+    
+</select>
+<button (click)="getCoronadata()">Get-Data</button>
+
+<table class="table table-striped">
+<thead>
+  <tr>
+    <th scope="col">Country</th>
+    <th scope="col">Confirmed</th>
+    <th scope="col">Recovered</th>
+    <th scope="col">Death</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <th scope="row">{{country}}</th>
+    <td>{{confirmed}}</td>
+    <td>{{recovered}}</td>
+    <td>{{death}}</td>
+  </tr>
+  
+</tbody>
+</table>
+<p class="lead">Corona viruses are a large family of viruses which may cause illness
+    in animals or humans. In humans, several coronaviruses are known
+    to cause respiratory infections ranging from the common cold to more
+    severe diseases such as Middle East Respiratory Syndrome (MERS)
+    and Severe Acute Respiratory Syndrome (SARS). The most recently
+    discovered coronavirus causes coronavirus disease COVID-19. </p>
+<hr><p>
+COVID-19 is the infectious disease caused by the most recently
+discovered corona virus. This new virus and disease were unknown
+before the outbreak began in Wuhan, China, in December 2019. </p>
+
